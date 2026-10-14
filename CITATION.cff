@@ -1,0 +1,16 @@
+cff-version: 1.2.0
+message: "If you use this software in your research, please cite it using the metadata below."
+title: "HSI Tracking Plot Studio"
+type: software
+version: 1.4.0
+date-released: 2026-10-14
+authors:
+  - name: "HSI Tracking Plot Studio Team"
+repository-code: "https://github.com/sleeep913/HSITrackingPlotStudio"
+url: "https://github.com/sleeep913/HSITrackingPlotStudio"
+license: MIT
+keywords:
+  - hyperspectral imaging
+  - object tracking
+  - tracking evaluation
+  - scientific visualization

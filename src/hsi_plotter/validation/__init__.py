@@ -1,0 +1,1 @@
+"""Structured data preflight validation."""

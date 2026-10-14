@@ -1,0 +1,66 @@
+[build-system]
+requires = ["hatchling>=1.25"]
+build-backend = "hatchling.build"
+
+[project]
+name = "hsi-tracking-plotter"
+version = "1.4.0"
+description = "Offline desktop platform for hyperspectral object-tracking evaluation and publication figures"
+readme = "README.md"
+requires-python = ">=3.12,<3.13"
+license = { text = "MIT" }
+authors = [
+  { name = "HSI Tracking Plot Studio Team" },
+]
+dependencies = [
+  "PySide6>=6.8,<7",
+  "numpy>=2.1,<3",
+  "scipy>=1.14,<2",
+  "matplotlib>=3.9,<4",
+  "pandas>=2.2,<3",
+  "opencv-python-headless>=4.10,<5",
+  "Pillow>=11,<12",
+]
+
+[project.optional-dependencies]
+dev = [
+  "pytest>=8.3,<9",
+  "pytest-cov>=6,<7",
+  "ruff>=0.9,<1",
+  "pyinstaller>=6.11,<7",
+]
+
+[project.gui-scripts]
+hsi-tracking-plotter = "hsi_plotter.app:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/hsi_plotter"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-ra --strict-markers"
+markers = [
+  "gui: tests requiring a Qt application",
+  "golden: tests comparing against MATLAB or rendered golden files",
+]
+
+[tool.coverage.run]
+branch = true
+source = ["hsi_plotter"]
+
+[tool.coverage.report]
+show_missing = true
+skip_covered = true
+
+[tool.ruff]
+target-version = "py312"
+line-length = 100
+src = ["src", "tests"]
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B", "SIM"]
+
+[tool.ruff.format]
+quote-style = "double"
+indent-style = "space"
+

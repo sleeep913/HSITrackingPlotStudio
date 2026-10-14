@@ -1,0 +1,42 @@
+{
+  "schema_version": 1,
+  "datasets": [
+    {
+      "id": "HOTC2020",
+      "label": "HOTC2020",
+      "path": "HOTC2020/groundtruth.csv",
+      "sequence_count": 35,
+      "frame_count": 16574,
+      "modalities": [
+        "unspecified"
+      ],
+      "sha256": "d4a3d42a219ea1a4c950a941a838a35bf628082da6978042416f6f98365c2333"
+    },
+    {
+      "id": "HOTC2023",
+      "label": "HOTC2023",
+      "path": "HOTC2023/groundtruth.csv",
+      "sequence_count": 87,
+      "frame_count": 28430,
+      "modalities": [
+        "nir",
+        "rednir",
+        "vis"
+      ],
+      "sha256": "ee118ff81332360b4c8bfb64cf7d6735cd0e3957dc6b25d833e2a07b9be17f2e"
+    },
+    {
+      "id": "HOTC2024",
+      "label": "HOTC2024",
+      "path": "HOTC2024/groundtruth.csv",
+      "sequence_count": 117,
+      "frame_count": 51730,
+      "modalities": [
+        "nir",
+        "rednir",
+        "vis"
+      ],
+      "sha256": "32f32bd9f36822d2937917c160ce133c8e2c2916d5171ba870debada117ee17b"
+    }
+  ]
+}
